@@ -1,6 +1,8 @@
 # k8s image syncer
 sync image to your repo for kubernetes
 
+## 2020-09-28
+
 + [kubeimages/coredns:1.7.0](https://hub.docker.com/r/kubeimages/coredns/tags)
 + [kubeimages/flannel:v0.13.0](https://hub.docker.com/r/kubeimages/flannel/tags)
 + [kubeimages/kubernetesui-dashboard:v2.0.0](https://hub.docker.com/r/kubeimages/kubernetesui-dashboard/tags)
