@@ -3,8 +3,9 @@ name: docker-buildx
 on:
   push:
     paths:
-      - '.github/workflows/docker-buildx.yml'
-      - 'docker-buildx/**'
+      - 'dockerfiles/*.Dockerfile'
+      - 'sync.sh'
+      - 'Makefile'
 
 jobs:
   buildx:
