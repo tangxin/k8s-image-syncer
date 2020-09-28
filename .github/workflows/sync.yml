@@ -18,4 +18,16 @@ jobs:
         with:
           password: ${{ secrets.DOCKER_PASSWORD }}
           username: ${{ secrets.DOCKER_USERNAME }}
-      - run: make sync
+      - name: sync images
+        run: make sync
+
+      - name: Commit files
+        run: |
+          git config --local user.email "workflow@github.io"
+          git config --local user.name "tangxin"
+          git add README.md
+          git commit -am "update README.md"
+      - name: Push changes
+        uses: ad-m/github-push-action@master
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
