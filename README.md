@@ -1,7 +1,6 @@
 # k8s image syncer
 sync image to your repo for kubernetes
 
-
 + [kubeimages/coredns:1.7.0](dockerfiles/coredns.Dockerfile)
 + [kubeimages/flannel:v0.13.0](dockerfiles/flannel.Dockerfile)
 + [kubeimages/kubernetesui-dashboard:v2.0.0](dockerfiles/kubernetesui-dashboard.Dockerfile)
