@@ -7,4 +7,12 @@ mkdir -p images/$target
 touch images/$target/Dockerfile
 
 mkdir -p .github/workflows/
-envsubst <workflow.yml.tmpl >.github/workflows/$target.yml
+envsubst <tmpl/workflow.yml >.github/workflows/$target.yml
+
+envsubst < tmpl/dependabot/header.yml > .github/dependabot.yml
+for target in $(ls images)
+do
+{
+    envsubst <tmpl/dependabot/body.yml >> .github/dependabot.yml
+}
+done

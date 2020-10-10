@@ -6,6 +6,41 @@ updates:
       interval: "daily"
 
   - package-ecosystem: "docker"
-    directory: "/dockerfiles"
+    directory: "/images/coredns"
+    schedule:
+      interval: "daily"
+
+  - package-ecosystem: "docker"
+    directory: "/images/distroless-cc"
+    schedule:
+      interval: "daily"
+
+  - package-ecosystem: "docker"
+    directory: "/images/distroless-static"
+    schedule:
+      interval: "daily"
+
+  - package-ecosystem: "docker"
+    directory: "/images/flannel"
+    schedule:
+      interval: "daily"
+
+  - package-ecosystem: "docker"
+    directory: "/images/kubernetesui-dashboard"
+    schedule:
+      interval: "daily"
+
+  - package-ecosystem: "docker"
+    directory: "/images/metrics-server"
+    schedule:
+      interval: "daily"
+
+  - package-ecosystem: "docker"
+    directory: "/images/nginx-ingress-controller"
+    schedule:
+      interval: "daily"
+
+  - package-ecosystem: "docker"
+    directory: "/images/pause"
     schedule:
       interval: "daily"
