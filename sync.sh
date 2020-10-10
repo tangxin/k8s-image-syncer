@@ -15,6 +15,7 @@ for dockerfile in $(ls dockerfiles); do
         image=${_image%%,*}
         # tag=${_image##*,}
         tag=$(grep FROM dockerfiles/${dockerfile}  | head -n 1 | awk -F'[: ]' '{print $3}')
+        [ -z "${tag}" ] && tag=latest
 
         docker buildx build --push --platform=linux/amd64,linux/arm64 \
             --tag=kubeimages/${image}:${tag} \
