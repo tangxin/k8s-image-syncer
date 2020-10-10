@@ -16,7 +16,17 @@ updates:
       interval: "daily"
 
   - package-ecosystem: "docker"
+    directory: "/images/distroless-cc-debian10"
+    schedule:
+      interval: "daily"
+
+  - package-ecosystem: "docker"
     directory: "/images/distroless-static"
+    schedule:
+      interval: "daily"
+
+  - package-ecosystem: "docker"
+    directory: "/images/distroless-static-debian10"
     schedule:
       interval: "daily"
 

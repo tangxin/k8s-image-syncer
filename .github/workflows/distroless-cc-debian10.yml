@@ -1,0 +1,22 @@
+name: distroless-cc-debian10
+
+on:
+  push:
+    paths:
+      - 'sync.sh'
+      - 'images/distroless-cc-debian10/*'
+      - '.github/workflows/distroless-cc-debian10.yml'
+
+jobs:
+  buildx:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+      - uses: docker/setup-qemu-action@v1
+      - uses: docker/setup-buildx-action@v1
+      - uses: docker/login-action@v1
+        with:
+          password: ${{ secrets.DOCKER_PASSWORD }}
+          username: ${{ secrets.DOCKER_USERNAME }}
+      - name: sync images
+        run: /bin/bash sync.sh images/distroless-cc-debian10
