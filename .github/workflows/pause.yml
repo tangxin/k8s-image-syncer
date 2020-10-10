@@ -1,11 +1,11 @@
-name: distroless-cc
+name: pause
 
 on:
   push:
     paths:
       - 'sync.sh'
-      - 'images/distroless-cc/*'
-      - '.github/workflows/distroless-cc.yml'
+      - 'images/pause/*'
+      - '.github/workflows/pause.yml'
 
 jobs:
   buildx:
@@ -19,4 +19,4 @@ jobs:
           password: ${{ secrets.DOCKER_PASSWORD }}
           username: ${{ secrets.DOCKER_USERNAME }}
       - name: sync images
-        run: /bin/bash sync.sh images/distroless-cc
+        run: /bin/bash sync.sh images/pause
