@@ -1,4 +1,6 @@
 #!/bin/bash
+# 
+# usage: ./new.sh pause
 
 [ -z $1 ] && exit 1
 export target=$1

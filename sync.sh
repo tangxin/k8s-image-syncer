@@ -3,6 +3,7 @@
 TARGET=$1
 [ -z ${TARGET} ] && exit 1
 
+
 for dockerfile in $(ls ${TARGET}); do
     {
         # _image=${dockerfile/.Dockerfile/}
@@ -12,10 +13,10 @@ for dockerfile in $(ls ${TARGET}); do
         tag=$(grep FROM ${TARGET}/${dockerfile} | head -n 1 | awk -F'[: ]' '{print $3}')
         [ -z "${tag}" ] && tag=latest
 
-        docker buildx build --push --platform=linux/amd64,linux/arm64 \
-            --tag=kubeimages/${image}:${tag} \
+        echo "docker buildx build --push --platform=linux/amd64,linux/arm64 \
+            --tag=${REGISTRY}/${image}:${tag} \
             --file=${TARGET}/${dockerfile} \
-            --build-arg=TAG=${tag} .
+            --build-arg=TAG=${tag} ."
 
     }
 done
