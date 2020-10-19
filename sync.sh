@@ -16,9 +16,7 @@ for dockerfile in $(ls ${TARGET}); do
         docker buildx build --push --platform=linux/amd64,linux/arm64 \
             --tag=${REGISTRY}/${image}:${tag} \
             --file=${TARGET}/${dockerfile} \
-            --build-arg=TAG=${tag} .
-
-        # [ $? -ne 0 ] && exit 1 # 错误退出
-        echo $?
+            --build-arg=TAG=${tag} .            \
+            || exit $?
     }
 done

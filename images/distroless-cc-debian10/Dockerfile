@@ -1,1 +1,1 @@
-FROM gcr.io/distroless/static-debian10
+FROM gcr.io/distroless/cc-debian10
