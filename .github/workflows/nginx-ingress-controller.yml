@@ -19,7 +19,7 @@ jobs:
           password: ${{ secrets.DOCKER_PASSWORD }}
           username: ${{ secrets.DOCKER_USERNAME }}
       - name: sync images
-        run: /bin/bash sync.sh images/nginx-ingress-controller
+        run: REGISTRY=kubeimages /bin/bash sync.sh images/nginx-ingress-controller
   selfhost:
     runs-on:
       - self-hosted

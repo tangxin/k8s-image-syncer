@@ -13,10 +13,11 @@ for dockerfile in $(ls ${TARGET}); do
         tag=$(grep FROM ${TARGET}/${dockerfile} | head -n 1 | awk -F'[: ]' '{print $3}')
         [ -z "${tag}" ] && tag=latest
 
-        echo "docker buildx build --push --platform=linux/amd64,linux/arm64 \
+        docker buildx build --push --platform=linux/amd64,linux/arm64 \
             --tag=${REGISTRY}/${image}:${tag} \
             --file=${TARGET}/${dockerfile} \
-            --build-arg=TAG=${tag} ."
+            --build-arg=TAG=${tag} .
 
+        [ $? -ne 0 ] && exit 1 # 错误退出
     }
 done
