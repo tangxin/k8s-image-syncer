@@ -18,6 +18,7 @@ for dockerfile in $(ls ${TARGET}); do
             --file=${TARGET}/${dockerfile} \
             --build-arg=TAG=${tag} .
 
-        [ $? -ne 0 ] && exit 1 # 错误退出
+        # [ $? -ne 0 ] && exit 1 # 错误退出
+        echo $?
     }
 done
