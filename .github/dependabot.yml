@@ -31,12 +31,32 @@ updates:
       interval: "daily"
 
   - package-ecosystem: "docker"
+    directory: "/images/elasticsearch-oss"
+    schedule:
+      interval: "daily"
+
+  - package-ecosystem: "docker"
+    directory: "/images/filebeat"
+    schedule:
+      interval: "daily"
+
+  - package-ecosystem: "docker"
     directory: "/images/flannel"
     schedule:
       interval: "daily"
 
   - package-ecosystem: "docker"
+    directory: "/images/kibana"
+    schedule:
+      interval: "daily"
+
+  - package-ecosystem: "docker"
     directory: "/images/kubernetesui-dashboard"
+    schedule:
+      interval: "daily"
+
+  - package-ecosystem: "docker"
+    directory: "/images/logstash"
     schedule:
       interval: "daily"
 

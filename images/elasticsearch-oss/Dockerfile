@@ -1,0 +1,1 @@
+FROM kubeimages/elasticsearch-oss:7.9.3

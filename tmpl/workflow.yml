@@ -6,6 +6,9 @@ on:
       - 'sync.sh'
       - 'images/${target}/*'
       - '.github/workflows/${target}.yml'
+    branches:
+      - master
+
 
 jobs:
   buildx:

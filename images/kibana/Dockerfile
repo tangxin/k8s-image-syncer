@@ -1,0 +1,1 @@
+FROM kubeimages/kibana:7.9.3
