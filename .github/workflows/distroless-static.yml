@@ -7,6 +7,9 @@ on:
       - 'images/distroless-static/*'
       - '.github/workflows/distroless-static.yml'
 
+  schedule:
+    - cron: '10 3 * * *'
+
 jobs:
   buildx:
     runs-on: ubuntu-latest

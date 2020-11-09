@@ -7,6 +7,9 @@ on:
       - 'images/distroless-cc-debian10/*'
       - '.github/workflows/distroless-cc-debian10.yml'
 
+  schedule:
+    - cron: '10 3 * * *'
+
 jobs:
   buildx:
     runs-on: ubuntu-latest
