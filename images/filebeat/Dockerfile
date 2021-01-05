@@ -1,1 +1,1 @@
-FROM kubeimages/filebeat:7.9.3-static
+FROM kubeimages/filebeat:7.10.1-static
