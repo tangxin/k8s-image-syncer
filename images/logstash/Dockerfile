@@ -1,1 +1,1 @@
-FROM kubeimages/logstash:7.9.3
+FROM kubeimages/logstash:7.10.1
