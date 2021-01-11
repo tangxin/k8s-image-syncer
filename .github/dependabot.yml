@@ -21,6 +21,16 @@ updates:
       interval: "daily"
 
   - package-ecosystem: "docker"
+    directory: "/images/distroless-java11"
+    schedule:
+      interval: "daily"
+
+  - package-ecosystem: "docker"
+    directory: "/images/distroless-java8"
+    schedule:
+      interval: "daily"
+
+  - package-ecosystem: "docker"
     directory: "/images/distroless-static"
     schedule:
       interval: "daily"
