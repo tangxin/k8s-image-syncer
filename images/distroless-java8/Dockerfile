@@ -1,1 +1,1 @@
-FROM gcr.io/distroless/java:8
+FROM gcr.io/distroless/java:11
