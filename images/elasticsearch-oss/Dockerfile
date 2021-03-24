@@ -1,1 +1,1 @@
-FROM kubeimages/elasticsearch-oss:7.10.1
+FROM kubeimages/elasticsearch-oss:7.10.2
